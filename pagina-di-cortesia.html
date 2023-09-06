@@ -16,7 +16,7 @@
 
         <meta name="description" content="">
         <meta name="author" content="">
-        <meta http-equiv = "refresh" content = "8; url = https://www.vetere.tech" />
+        <meta http-equiv = "refresh" content = "15; url = https://www.vetere.tech" />
 
         <title>Vetere Tech</title>
 <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/simonevetere/vetere.tech/main/images/favicon.ico">
@@ -56,7 +56,7 @@ https://templatemo.com/tm-567-nomad-force
 
                         <div class="col-lg-6 col-12 mt-3 mb-lg-5">
                             <p class="me-4" data-aos="fade-up" data-aos-delay="300">Grazie per averci contattato da Vetere Tech. Siamo lieti di ricevere il tuo messaggio e ti risponderemo al più presto. Nel frattempo, puoi visitare il nostro sito web per scoprire i nostri servizi e le nostre offerte. Ti ringraziamo per la tua fiducia e ti auguriamo una buona giornata. A presto! 😊</p>
-                            <p class="me-4" data-aos="fade-up" data-aos-delay="1000">Puoi aspettare qui, sarai reindirizzato tra 8 secondi al sito principale.</p>                            
+                            <p class="me-4" data-aos="fade-up" id="countdown" data-aos-delay="1000"></p>                            
                         </div>
 
                     </div>
@@ -64,6 +64,38 @@ https://templatemo.com/tm-567-nomad-force
             </section>
 
         <!-- JAVASCRIPT FILES -->
+        <script>
+        window.onload = function() {
+          // Inizializza una variabile per il tempo rimanente
+          let tempo = 15;
+          // Seleziona l'elemento HTML da cambiare
+          let elemento = document.getElementById("countdown");
+          // Crea una funzione che decrementa il tempo e cambia l'elemento
+          function contoAllaRovescia() {
+            // Se il tempo è maggiore di zero, sottrai uno e cambia l'elemento
+            if (tempo > 0) {
+              tempo--;
+              elemento.innerHTML = "Puoi aspettare qui, sarai reindirizzato tra " + tempo + " secondi al sito principale.";
+            }
+            // Altrimenti, cancella l'intervallo e cambia l'elemento con un messaggio finale
+            else {
+              tratto = "-";
+              
+              clearInterval(intervallo);
+              
+              for(i=0;i++;i<99){
+                tratto = tratto + '-';
+                elemento.innerHTML = tratto;
+              }
+
+            }
+          }
+          // Esegui la funzione una volta subito
+          contoAllaRovescia();
+          // Esegui la funzione ogni secondo usando setInterval
+          let intervallo = setInterval(contoAllaRovescia, 1000);
+        }
+        </script>
         <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
         <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
         <script src="{{ url_for('static', filename='js/jquery.sticky.js') }}"></script>
