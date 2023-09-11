@@ -70,7 +70,7 @@ https://templatemo.com/tm-567-nomad-force
             <nav class="navbar navbar-expand-lg bg-light shadow-lg">
                 <div class="container">
                     <a class="navbar-brand" href="">
-                       <img src="https://raw.githubusercontent.com/simonevetere/vetere.tech/main/images/favicon.ico"> <strong>Vetere Tech</strong>
+                       <img src="https://raw.githubusercontent.com/simonevetere/vetere.tech/main/images/favicon.ico">
                     </a>
 
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -103,13 +103,36 @@ https://templatemo.com/tm-567-nomad-force
                     </div>                    
                 </div>
             </nav>
-            <div class="text-center">
-                <img src="https://raw.githubusercontent.com/simonevetere/vetere.tech/main/images/chatbot.jpg" class="rounded" alt="Responsive image">
+            <!-- Flexbox container for aligning the toasts -->
+            <div aria-live="polite" aria-atomic="true" class="d-flex justify-content-center align-items-center" style="min-height: 200px;">
+
+              <!-- Then put toasts within -->
+              <div id="toast" class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="9999999">
+                <div class="toast-header">
+                  <img class="rounded mr-2" src="https://raw.githubusercontent.com/simonevetere/vetere.tech/main/images/favicon.ico">
+                  <strong class="mr-auto">Vetere Tech Bot</strong>
+                </div>
+                <div class="toast-body">
+                  Ciao! Sono lo Stregatto del futuro, un’intelligenza artificiale intelligente che supera il test di Turing. Sono qui per offrire soluzioni tecnologiche innovative e personalizzate. Sono curioso, divertente e parlo come lo Stregatto delle avventure di Alice nel paese delle meraviglie nel futuro distopico in cui bisogna arrangiarsi con la tecnologia. Sono esperto in AI, chatbot, realtà aumentata e hardware personalizzato. Scegli me, lo Stregatto del futuro, per soluzioni di alta qualità e innovative!
+                </div>
                 <h2 class="text-center"><a class='btn btn-primary' href='https://vetere.tech/chatbot/'>Chatta Ora!</a></h2>
-            </div>
-            <div class="text-center">
-                <img src="https://raw.githubusercontent.com/simonevetere/vetere.tech-ads/main/templates/img/1st-item.jpg" style="width:100%" class="rounded" alt="Responsive image">
-            <h2 class="text-center"><a class='btn btn-primary' href='https://www.vetere.tech/ads'>Prezzi</a></h2>
+              </div>
+            </div>            
+            <!-- Flexbox container for aligning the toasts -->
+            <div aria-live="polite" aria-atomic="true" class="d-flex justify-content-center align-items-center" style="min-height: 200px;">
+
+              <!-- Then put toasts within -->
+              <div id="toast2" class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="9999999">
+                <div class="toast-header">
+                  <img class="rounded mr-2" src="https://raw.githubusercontent.com/simonevetere/vetere.tech/main/images/favicon.ico">
+                  <strong class="mr-auto">Vetere Tech Bot</strong>
+                </div>
+                <div class="toast-body">
+                    Su vetere.tech troverai promozioni esclusive e offerte speciali su una vasta gamma di prodotti tecnologici. Scegli tra le ultime novità in AI, chatbot, realtà aumentata e hardware personalizzato, e approfitta delle nostre promozioni per ottenere soluzioni di alta qualità a prezzi convenienti. Non perdere l’opportunità di vivere nel futuro distopico con le tecnologie innovative di Vetere Tech!
+                </div>
+                <img style="padding:5%;width: 95%;" src="https://raw.githubusercontent.com/simonevetere/vetere.tech-ads/main/templates/img/1st-item.jpg" style="width:100%" class="rounded" alt="Responsive image">
+                <h2 class="text-center"><a class='btn btn-primary' href='https://www.vetere.tech/ads'>Prezzi</a></h2>
+              </div>
             </div>
      
             <section class="section-padding pb-0" id="about">
@@ -314,7 +337,20 @@ https://templatemo.com/tm-567-nomad-force
                 </div>
             </section>
         </footer>
+        <!-- JAVASCRIPT FILES -->
+        <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/jquery.sticky.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/aos.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/jquery.magnific-popup.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/magnific-popup-options.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/scrollspy.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/custom.js') }}"></script>
         <script>
+        $( window ).on( "load", function() {
+            $('#toast').toast('show');
+            $('#toast2').toast('show');
+        } );
         function openchat(){
             document.getElementById('frame-chatbot').hidden = !document.getElementById('frame-chatbot').hidden;
             document.getElementById('close').hidden = !document.getElementById('close').hidden; 
@@ -326,15 +362,6 @@ https://templatemo.com/tm-567-nomad-force
             document.getElementById('svgchat').hidden = !document.getElementById('svgchat').hidden
         }
         </script>
-        <!-- JAVASCRIPT FILES -->
-        <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
-        <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
-        <script src="{{ url_for('static', filename='js/jquery.sticky.js') }}"></script>
-        <script src="{{ url_for('static', filename='js/aos.js') }}"></script>
-        <script src="{{ url_for('static', filename='js/jquery.magnific-popup.min.js') }}"></script>
-        <script src="{{ url_for('static', filename='js/magnific-popup-options.js') }}"></script>
-        <script src="{{ url_for('static', filename='js/scrollspy.min.js') }}"></script>
-        <script src="{{ url_for('static', filename='js/custom.js') }}"></script>
 
     </body>
 </html>
